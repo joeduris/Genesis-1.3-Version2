@@ -185,7 +185,7 @@ c
       include 'mpi.cmn'
       include 'input.cmn'
 c
-      integer nin
+      integer nin,iarg,j,k
 c
       namelist /newrun/
 c
@@ -239,7 +239,12 @@ c
       call preset
       if (mpi_id.eq.0) then
         write(6,100)                                 !initialize input parameters
-        read(5,110) inputfile                        !get input filename.
+	  iarg = 1
+	  inputfile  = ' '
+	  call getarg (iarg, inputfile)
+          j = index(inputfile//' ',' ')-1
+          k = index(inputfile(1:j)//'.','.')-1
+c        read(5,110) inputfile                        !get input filename.
       endif
       if (mpi_size.gt.1) then
         call MPI_BCAST(inputfile,30,MPI_CHARACTER,0,
