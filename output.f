@@ -993,7 +993,7 @@ c
         nfld=nfld+30
         open(nfld,file=outputfile(1:j)//'.fld'//file_id,
      +        status='unknown',access='direct',
-     +        recl=ncar*ncar*8,err=100)
+     +        recl=ncar*ncar*16,err=100)
         do i=2,nhloop 
           nfldhmpi(i-1)=nfldh(i-1)
           nfldh(i-1)=nfldh(i-1)+30
@@ -1001,7 +1001,7 @@ c
           open(nfldh(i-1),
      +        file=outputfile(1:j)//'.fld'//file_harm//file_id,
      +        status='unknown',access='direct',
-     +        recl=ncar*ncar*8,err=100)          
+     +        recl=ncar*ncar*16,err=100)
         enddo
       endif
  5    format(I1.1)
