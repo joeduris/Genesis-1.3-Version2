@@ -13,22 +13,23 @@ SOURCE=  main.f check.f diagno.f esource.f field.f incoherent.f \
 #OBJECTS =$(SOURCE:.f=.o)
 #
 #COMPILER = gfortran
-COMPILER = mpif77
+COMPILER ?= mpif77
 #
 #  executable name
 #
-EXECUTABLE = genesis 
+EXECUTABLE = genesis2
 #EXECUTABLE = genesis_mpi 
 #
 # targets
 #
-genesis:	$(SOURCE)
+genesis2:	$(SOURCE)
 	$(COMPILER) -g -w -O -Wall -o $(EXECUTABLE) $(SOURCE) $(LIB)
 	@echo ' ******* end of linking ****** '
 
 clean:
 	rm -f *~
 	rm -f *.o
+	rm -rf genesis2*
 
 install:
 	cp ./$(EXECUTABLE) ~/bin/
