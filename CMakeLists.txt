@@ -39,6 +39,10 @@ list(APPEND _sources
     output.f
 )
 
+if (WIN32)
+    add_definitions(-DWIN)
+endif()
+
 if(USE_MPI)
     find_package(MPI REQUIRED)
     add_definitions(${MPI_Fortran_COMPILE_FLAGS} -DUSE_MPI)
@@ -51,6 +55,8 @@ else()
     list(APPEND _sources mpi_single.f)
     add_executable(genesis2 ${_sources})
 endif()
+
+target_compile_options(genesis2 PRIVATE -cpp)
 
 install(TARGETS genesis2
         RUNTIME DESTINATION bin)
