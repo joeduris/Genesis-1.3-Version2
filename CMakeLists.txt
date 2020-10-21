@@ -52,4 +52,6 @@ else()
     add_executable(genesis2 ${_sources})
 endif()
 
+install(TARGETS genesis2
+        RUNTIME DESTINATION bin)
 
