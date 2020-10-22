@@ -5,7 +5,7 @@ c     t... are the values of the variables at current position
 c     d... are the value of the differentioan equation
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'work.cmn'
@@ -56,7 +56,7 @@ c     calculates source term for gamma-theta integration
 c     when higher harmonic coupling is considered
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
       include 'input.cmn'
       include 'magnet.cmn'
@@ -129,7 +129,7 @@ c     ============================================================
 c     routine to calculate the coupling to higher modes
 c     ------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn' 
       include 'input.cmn'
 c

@@ -8,7 +8,7 @@ c        to use tridiag methode transpose data array:
 c        (1)->u(n)->u(i,j)->u(j,i)->u(n)->(2)->transpose again 
 c     ------------------------------------------------------------------
 c
-      include   'genesis.def'
+#include "genesis.def"
       include   'field.cmn'
       include   'input.cmn'
 c
@@ -108,7 +108,7 @@ c     solve a tridiagonal system for cartesian mesh in x direction
 c     cbet and cwet are precalculated in auxval
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'field.cmn'
 
@@ -142,7 +142,7 @@ c     solve a tridiagonal system for cartesian mesh in y direction
 c     cbet and cwet are precalculated in auxval
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
       include 'input.cmn'
 
@@ -181,7 +181,7 @@ c     construct the diagonal matrix for field equation
 c     do some precalculation for field solver
 c     ----------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'field.cmn'
       include 'work.cmn'

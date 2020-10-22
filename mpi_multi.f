@@ -1,6 +1,6 @@
       subroutine mpi_merge
 
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
       include 'input.cmn'
       include 'io.cmn'

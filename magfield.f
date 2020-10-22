@@ -15,7 +15,7 @@ c                     k3pp - correction in x
 c
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'input.cmn'
       include  'magnet.cmn'
       include  'mpi.cmn'
@@ -337,7 +337,7 @@ c     calculation of the square of the off-axis wiggler field at step i
 c     the dependency on x and y is given by the wiggler type
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'magnet.cmn'
       include  'input.cmn'
 c
@@ -357,7 +357,7 @@ c     ===================================================================
 c     output of the used magentic field
 c     -------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'magnet.cmn'
       include 'input.cmn'
 c
@@ -485,7 +485,7 @@ c     note: dp,co qx are combined into awerx. output is only dp
 
 c     --------------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'magnet.cmn'
       include 'input.cmn'
 c
@@ -743,7 +743,7 @@ c     checks whether the user supplied file for the description of the
 c     magnetic fields is incomplete
 c     -------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
 c
       character*30   cmagtype(11)
       integer i,j,imz(11),nstepz
@@ -774,7 +774,7 @@ c     =================================================================
 c     extract information from beamfile
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'magnet.cmn'
 c
       character*(*) line

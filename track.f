@@ -5,7 +5,7 @@ c     this subroutine is call before and after runge-kutta integration
 c     of phase and energy
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'magnet.cmn'
       include 'particle.cmn'

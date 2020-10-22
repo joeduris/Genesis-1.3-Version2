@@ -7,7 +7,7 @@ c     all calculation are stored in a history arrays which will be
 c     written to a file ad the end of the run.
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'sim.cmn'
       include  'input.cmn'
       include  'field.cmn'

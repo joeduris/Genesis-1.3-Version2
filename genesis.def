@@ -14,7 +14,7 @@ c
      +          f_sdds = 2 ,                 !indicator for sdds filetype
      +          npmax  = 1000001,             !# of particles
      +          nzmax  = 10000,              !# of integration steps
-#if defined(WIN)
+#if WIN == 1
      +          nsmax  = 50000,              !# of slices
      +          nhmax  = 7,                  !maximum of harmonics
 #else
@@ -32,7 +32,7 @@ c
      +          tiny   = 1.d-25,             !check i for precission 
      +          small  = 1.d-7,              !check ii for precission
      +          nrgrid = 1000,               !number of radial points for s. c.
-#if defined(WIN)
+#if WIN == 1
      +          ncmax  = 261)                !# of gridpoints of cartesian mesh
 #else
      +          ncmax  = 503)                !# of gridpoints of cartesian mesh

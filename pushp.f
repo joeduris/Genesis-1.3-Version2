@@ -3,7 +3,7 @@ c     ==================================================================
 c     advance the particles, using runge-kutta (fourth order) method
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'work.cmn'
@@ -132,7 +132,7 @@ c     ========================================================================
 c     checks for lost particles, reorganizing the particle arrays
 c     ------------------------------------------------------------------------ 
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
 c

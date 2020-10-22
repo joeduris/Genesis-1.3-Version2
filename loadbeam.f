@@ -3,7 +3,7 @@ c     ===================================================================
 c     this routine fills the phase space for one slice of phase space
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'io.cmn'
@@ -108,7 +108,7 @@ c     ==================================================================
 c     shotnoise algortihm following fawley
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'work.cmn'
@@ -159,7 +159,7 @@ c     ==================================================================
 c     shotnoise algorithm following Penman
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
 c
@@ -200,7 +200,7 @@ c     ==================================================================
 c     do quiet loading of transverse phase space
 c     -------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'particle.cmn'
       include 'input.cmn'
 c
@@ -397,7 +397,7 @@ c     =================================================================
 c     load slice from distribution
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
 c
@@ -595,7 +595,7 @@ c     =======================================================
 c     collimation of the transverse tails
 c     ----------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'particle.cmn'
       include 'input.cmn'
 c

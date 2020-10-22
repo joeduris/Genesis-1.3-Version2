@@ -3,7 +3,7 @@ c     ==================================================================
 c     manages all initial input for genesis
 c     ------------------------------------------------------------------
 
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'io.cmn'
       include 'mpi.cmn'
@@ -114,7 +114,7 @@ c     opens binary input files (filed and part files) and checks for
 c     the filetype
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
 c
       character*(*) file
@@ -148,7 +148,7 @@ c     if the first line contains sdds then it returns the constant
 c     sdds, otherwise it returns the constant original
 c     ----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
 
       character*(*) file
@@ -181,7 +181,7 @@ c     this routine reads in the user input files.
 c     it assumes the standard fortran namelist format.
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
       include 'input.cmn'
 c
@@ -273,7 +273,7 @@ c     =============================================================
 c     read the file for external description of the electron beam
 c     -------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'time.cmn'
       include 'io.cmn'
@@ -471,7 +471,7 @@ c     =================================================================
 c     extract information from beamfile
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
 c
       character*(*) line
       character*511 cline
@@ -590,7 +590,7 @@ c     ==============================================
 c     read field from input file
 c     ----------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
       include 'input.cmn'
       include 'field.cmn'
@@ -620,7 +620,7 @@ c     apply dispersion to imported beam file from readpart
 c     subroutine supplied by Atoosa Meseck from Bessy
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
 c
@@ -702,7 +702,7 @@ c     =================================================================
 c     Transfer matrix calculation supplied by A. Meseck. 
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
       include 'input.cmn'
       include 'field.cmn'
@@ -774,7 +774,7 @@ c     =================================================================
 c     load complete set of particle from file
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'io.cmn' 
@@ -853,7 +853,7 @@ c     =================================================================
 c     read slice [tmin,tmax] of particle from distribution file
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'time.cmn'
       include 'io.cmn'
 
@@ -950,7 +950,7 @@ c     open an external file containing the distribution. read the file
 c     geting the parameter range etc.
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'particle.cmn'
       include 'input.cmn'
       include 'time.cmn'
@@ -1114,7 +1114,7 @@ c     =================================================================
 c     extract information from distfile
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'io.cmn'
@@ -1261,7 +1261,7 @@ c     sets default values of program inputs.
 c     default parameter modelled after the pegasus fel      
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'field.cmn'
 c
@@ -1491,7 +1491,7 @@ c     =============================================================
 c     read the file for external description of the radiation beam
 c     -------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'time.cmn'
       include 'io.cmn'
@@ -1658,7 +1658,7 @@ c     =================================================================
 c     extract information from beamfile
 c     -----------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
 c
       character*(*) line
       character*511 cline

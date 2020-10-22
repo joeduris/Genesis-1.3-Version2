@@ -3,7 +3,7 @@ c     =============================================
 c     calls all output function
 c     ---------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
       include 'diagnostic.cmn'
 c
@@ -24,7 +24,7 @@ c     ==================================================================
 c     initial output of genesis.
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
       include 'input.cmn'
       include 'io.cmn'
@@ -321,7 +321,7 @@ c     output of global parameter (t-independend):
 c     z, wiggler field
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'input.cmn'
       include  'magnet.cmn'
       include  'io.cmn'
@@ -455,7 +455,7 @@ c     output calculation results
 c        - history record
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'input.cmn'
       include  'diagnostic.cmn'
       include  'field.cmn'
@@ -530,7 +530,7 @@ c     output calculation results
 c        - history record
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'input.cmn'
       include  'field.cmn'
       include  'particle.cmn'
@@ -640,7 +640,7 @@ c     output of global parameter (t-independend):
 c     z, wiggler field
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'io.cmn'
       include  'particle.cmn'
       include  'input.cmn'
@@ -683,7 +683,7 @@ c     ==================================================================
 c     let user know % complete at every 10%.
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'magnet.cmn'
       include 'io.cmn'
@@ -707,7 +707,7 @@ c     ==================================================================
 c     dump fieldarray  
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'io.cmn'
       include 'field.cmn'
@@ -746,9 +746,9 @@ c     ====================================================================
 c     dump complete field array for future use
 c     --------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
-      include 'timerec.cmn'
+#include "timerec.cmn"
       include 'io.cmn'
       include 'work.cmn'
       include 'input.cmn'
@@ -868,7 +868,7 @@ c     ==================================
 c     dumps the escaped slippage field ahead of the bunch
 c     ---------------------------------
 
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
       include 'io.cmn'
       include 'work.cmn'
@@ -921,7 +921,7 @@ c     open ascii file (sequential access)
 c     ------------------------------------------------------------------ 
 c    
 c
-      include 'genesis.def'
+#include "genesis.def"
 c
       character*(*) file,status
       integer nio
@@ -939,7 +939,7 @@ c     open binary file (direct access) as addition output file
 c     ------------------------------------------------------------------ 
 c    
 c
-      include 'genesis.def'
+#include "genesis.def"
 c
       character*30 root
       character*4  extension
@@ -967,7 +967,7 @@ c     ===========================================
 c     open binary file for field, particle, dump field and dump particle
 c     ------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
       include 'io.cmn'
       include 'input.cmn'
@@ -1027,7 +1027,7 @@ c     ===========================================
 c     close binary file for field, particle, dump field and dump particle
 c     ------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
       include 'io.cmn'
       include 'field.cmn'
@@ -1060,7 +1060,7 @@ c     ============================================
 c     initial information for user
 c     --------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
 c 
       write(nlog,100) genver,platf
@@ -1078,7 +1078,7 @@ c     called at end of run.
 c     closes all files, which must stay open during the run
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
       include 'mpi.cmn'
 c
@@ -1116,7 +1116,7 @@ c     ========================================================
 c     print error messages
 c     --------------------------------------------------------
       
-      include 'genesis.def'
+#include "genesis.def"
       include 'io.cmn'
 
       integer ierr

@@ -3,7 +3,7 @@ c     ===================================================================
 c     set the beam parameter for the case of time-dependence
 c     -------------------------------------------------------------------
 c   
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'time.cmn'
@@ -78,7 +78,7 @@ c     set the beam parameter for the case of time-dependence
 c     -------------------------------------------------------------------
 c   
 
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'field.cmn'
       include 'time.cmn'

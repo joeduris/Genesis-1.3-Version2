@@ -4,7 +4,7 @@ c     fills the array crfield with initial field
 c     for start up from noise this should be small
 c     ---------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
       include 'input.cmn'
       include 'work.cmn'
@@ -75,7 +75,7 @@ c
 c     Note - only the fundamental is loaded. harmonics are set to zero
 c     --------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'sim.cmn'
       include 'field.cmn'
       include 'input.cmn'
@@ -119,12 +119,12 @@ c     fills the array crtime with a seeding field for the first
 c     slice.
 c     ---------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'field.cmn'
       include 'work.cmn'
       include 'io.cmn'
-      include 'timerec.cmn'
+#include "timerec.cmn"
       include 'diagnostic.cmn'
 c
       integer ix,islp,nslp,ierr,irec,i
@@ -197,7 +197,7 @@ c     ========================================
 c     swap current field with then time-record
 c     ----------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
       include 'input.cmn'
       include 'field.cmn'

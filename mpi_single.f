@@ -8,7 +8,7 @@ c
 c     ----------------------------------
       subroutine MPI_INIT(i1)
 c   
-      include 'genesis.def'
+#include "genesis.def"
       include 'mpi.cmn'
 c    
       integer i1

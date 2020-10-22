@@ -7,8 +7,8 @@ c
       integer ntmax,nofile
 c
       parameter(
-#if defined(WIN)
-     +          ntmax  = 151*151*500, !must be > than ncar*ncar*nslp(98)
+#if WIN == 1
+     +          ntmax  = 151*501*500, !must be > than ncar*ncar*nslp(98)
 #else
      +          ntmax  = 501*501*500, !must be > than ncar*ncar*nslp(98)
 #endif

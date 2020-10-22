@@ -4,7 +4,7 @@ c     locates the position of the electron on its actual trajectory
 c     apply orbit correction to account for wiggle motion.
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
       include 'input.cmn'
       include 'magnet.cmn'
@@ -103,7 +103,7 @@ c     and the particla phase theta.
 c     getpsi is only called by outpart to get a non moving bucket.
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
       include 'input.cmn'
       include 'particle.cmn'
