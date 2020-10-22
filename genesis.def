@@ -8,8 +8,12 @@ c
       integer original,f_sdds,keepdist
 c
       parameter(
-     +          genver = 1.0,                !genesis version
+     +          genver = 2.2,                !genesis version
+#if WIN == 1
+     +			platf  ='Win ',              !platform
+#else
      +			platf  ='Unix',              !platform
+#endif
      +          original = 1 ,               !indicator for original filetype
      +          f_sdds = 2 ,                 !indicator for sdds filetype
      +          npmax  = 1000001,             !# of particles
