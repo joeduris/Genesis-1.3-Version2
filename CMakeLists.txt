@@ -46,21 +46,23 @@ if (WIN32)
     add_definitions(-DWIN)
 endif()
 
+set(OUTPUT_NAME "genesis2")
+
 if(USE_MPI)
     find_package(MPI REQUIRED)
     add_definitions(${MPI_Fortran_COMPILE_FLAGS} -DUSE_MPI)
     include_directories(${MPI_Fortran_INCLUDE_PATH})
     list(APPEND _sources mpi_multi.f)
-    add_executable(genesis2 ${_sources})
-    target_link_libraries(genesis2 ${MPI_Fortran_LIBRARIES})
+    add_executable(genesis2-mpi ${_sources})
+    target_link_libraries(genesis2-mpi ${MPI_Fortran_LIBRARIES})
+    set(OUTPUT_NAME "genesis2-mpi")
 else()
     configure_file(mpif.h.single mpif.h COPYONLY)
     list(APPEND _sources mpi_single.f)
     add_executable(genesis2 ${_sources})
 endif()
 
-target_compile_options(genesis2 PRIVATE -cpp)
-
-install(TARGETS genesis2
+target_compile_options(${OUTPUT_NAME} PRIVATE -cpp)
+install(TARGETS ${OUTPUT_NAME}
         RUNTIME DESTINATION bin)
 
