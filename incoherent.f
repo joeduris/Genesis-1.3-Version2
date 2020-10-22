@@ -9,7 +9,7 @@ c     with respect to e. saldin nima381 (1996) p 545-547
 c     ------------------------------------------------------------------
 c
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'input.cmn'
       include  'particle.cmn'
 c

@@ -5,7 +5,7 @@ c     such as magin and maginfile. guerantee compability for
 c     older versions of genesis 1.3
 c     ------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'sim.cmn'
       include 'mpi.cmn'
@@ -199,7 +199,7 @@ c     ==================================================================
 c     checks some boundaries of the input file.
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'input.cmn'
       include  'time.cmn'
       include  'io.cmn'

@@ -8,14 +8,23 @@ c
       integer original,f_sdds,keepdist
 c
       parameter(
-     +          genver = 1.0,                !genesis version
+     +          genver = 2.2,                !genesis version
+#if WIN == 1
+     +			platf  ='Win ',              !platform
+#else
      +			platf  ='Unix',              !platform
+#endif
      +          original = 1 ,               !indicator for original filetype
      +          f_sdds = 2 ,                 !indicator for sdds filetype
      +          npmax  = 1000001,             !# of particles
      +          nzmax  = 10000,              !# of integration steps
+#if WIN == 1
+     +          nsmax  = 50000,              !# of slices
+     +          nhmax  = 7,                  !maximum of harmonics
+#else
      +          nsmax  = 150000,              !# of slices
      +          nhmax  = 5,                  !maximum of harmonics
+#endif
      +          ndmax  = 1250000,            !maximum of particle in imported distribution
      +          keepdist = 1,                !<> 0 keeps distribution in memory
      +          eev    = 510999.06d0,        !energy units (mc^2) in ev
@@ -27,7 +36,11 @@ c
      +          tiny   = 1.d-25,             !check i for precission 
      +          small  = 1.d-7,              !check ii for precission
      +          nrgrid = 1000,               !number of radial points for s. c.
+#if WIN == 1
+     +          ncmax  = 261)                !# of gridpoints of cartesian mesh
+#else
      +          ncmax  = 503)                !# of gridpoints of cartesian mesh
+#endif
 c
 c     error codes 
 c

@@ -6,7 +6,7 @@ c     claculating/normalizing some auxiliary variables
 c
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'particle.cmn'
       include 'sim.cmn'

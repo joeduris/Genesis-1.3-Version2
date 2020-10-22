@@ -1,6 +1,9 @@
 # set minimum cmake version
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
+# Uncomment for VERBOSE Makefiles. Useful for debugging.
+#set(CMAKE_VERBOSE_MAKEFILE ON)
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # project name and language
@@ -39,6 +42,10 @@ list(APPEND _sources
     output.f
 )
 
+if (WIN32)
+    add_definitions(-DWIN)
+endif()
+
 if(USE_MPI)
     find_package(MPI REQUIRED)
     add_definitions(${MPI_Fortran_COMPILE_FLAGS} -DUSE_MPI)
@@ -51,6 +58,8 @@ else()
     list(APPEND _sources mpi_single.f)
     add_executable(genesis2 ${_sources})
 endif()
+
+target_compile_options(genesis2 PRIVATE -cpp)
 
 install(TARGETS genesis2
         RUNTIME DESTINATION bin)

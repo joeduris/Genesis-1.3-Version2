@@ -3,7 +3,7 @@ c     ==================================================================
 c     advance one step in z
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'magnet.cmn'
       include 'particle.cmn'

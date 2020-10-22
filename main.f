@@ -47,7 +47,7 @@ c     main unit
 c     ------------------------------------------------------------------
       program genesis
 c
-      include 'genesis.def' 
+#include "genesis.def"
 c
       include 'mpi.cmn'
 c

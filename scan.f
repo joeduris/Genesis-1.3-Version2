@@ -3,7 +3,7 @@ c     ============================================================
 c     initialize beam parameter for scanning
 c     ------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'input.cmn'
       include 'sim.cmn'
 c
@@ -45,7 +45,7 @@ c     =========================================================================
 c     modify parameter for scanning - several subroutines have to be rerun
 c     -------------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
       include 'input.cmn'
       include 'particle.cmn'

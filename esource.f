@@ -5,7 +5,7 @@ c     all particle are discretized on a radial mesh for all
 c     selected azimutal and longitudinal fourier modes.
 c     ------------------------------------------------------------------
 c
-      include  'genesis.def'
+#include "genesis.def"
       include  'input.cmn'
       include  'particle.cmn'
       include  'work.cmn'

@@ -4,7 +4,7 @@ c     construct the source for the wave equation
 c     = radiation of the electron beam
 c     ------------------------------------------------------------------
 c
-      include 'genesis.def'
+#include "genesis.def"
       include 'field.cmn'
       include 'input.cmn'
       include 'magnet.cmn'

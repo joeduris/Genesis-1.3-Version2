@@ -3,8 +3,8 @@ c     ==================================================================
 c     opens a scratch-file for the time record if necessary
 c     ------------------------------------------------------------------
 c  
-      include 'genesis.def'
-      include 'timerec.cmn'
+#include "genesis.def"
+#include "timerec.cmn"
       include 'mpi.cmn'
 c      
       integer n
@@ -29,8 +29,8 @@ c     ==================================================================
 c     copies cpush into crtime array/file
 c     ------------------------------------------------------------------
 
-      include 'genesis.def'
-      include 'timerec.cmn'
+#include "genesis.def"
+#include "timerec.cmn"
       include 'field.cmn'
       include 'mpi.cmn'
 
@@ -65,8 +65,8 @@ c     ==================================================================
 c     copies crtime array/file into cpush
 c     ------------------------------------------------------------------
 
-      include 'genesis.def'
-      include 'timerec.cmn'
+#include "genesis.def"
+#include "timerec.cmn"
       include 'field.cmn'
       include 'mpi.cmn'
 
@@ -101,8 +101,8 @@ c     ====================================================================
 c     close the scratch file if necessary
 c     --------------------------------------------------------------------
 c
-      include 'genesis.def'
-      include 'timerec.cmn'
+#include "genesis.def"
+#include "timerec.cmn"
       include 'mpi.cmn'
 c
       if (mpi_id.gt.0) return   ! only the head node is managing the time-record

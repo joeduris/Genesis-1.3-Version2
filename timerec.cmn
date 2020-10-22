@@ -7,7 +7,11 @@ c
       integer ntmax,nofile
 c
       parameter(
+#if WIN == 1
+     +          ntmax  = 151*501*500, !must be > than ncar*ncar*nslp(98)
+#else
      +          ntmax  = 501*501*500, !must be > than ncar*ncar*nslp(98)
+#endif
      +          nofile = 0)   !<>0 -> slippage is stored on disk
 c
 c     --------------------------------------------------------------------
