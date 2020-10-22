@@ -1,24 +1,62 @@
 The latest release of Genesis supports parallel computer architecture,
 based on the Message Passing Interface (MPI) protocol.
 
-----------------------------------
+# Precompiled
 
-Compiling as a single processor code:
+## Anaconda
 
-1) mkdir build
-2) cd build
-3) cmake .. -DUSE_MPI=OFF
-4) make
+```shell script
+conda install -c conda-forge genesis2
+```
 
------------------------------------
+# Compiling The Code
 
-Compiling as a multi processor code:
+## Unix
 
-1) mkdir build
-2) cd build
-3) cmake .. -DUSE_MPI=ON
-4) make
+### Single Processor Code:
 
-==========================================================
+```shell script
+mkdir build
+cd build
+cmake .. -DUSE_MPI=OFF
+make
+make install
+```
 
-Sven Reiche - UCLA 9/30/05
+### Multi Processor Code:
+
+```shell script
+mkdir build
+cd build
+cmake .. -DUSE_MPI=ON
+make
+make install
+```
+
+## Windows
+
+### Single Processor Code:
+
+```shell script
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" .. -DUSE_MPI=OFF
+cmake --build .
+cmake --install
+```
+
+### Multi Processor Code:
+
+**Not Supported**
+
+Original Author: Sven Reiche - UCLA 9/30/05
+
+
+## Testing
+
+```shell script
+# Generate template file
+genesis2
+# Execute template file
+genesis2 template.in
+```
