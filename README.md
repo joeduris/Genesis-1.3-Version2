@@ -5,9 +5,22 @@ based on the Message Passing Interface (MPI) protocol.
 
 ## Anaconda
 
+The command below will install by default a `nompi` version of the package.
 ```shell script
 conda install -c conda-forge genesis2
 ```
+
+You can force a MPI implementation when installing via:
+```shell script
+# for OpenMPI
+conda install -c conda-forge genesis2=*=mpi_openmpi*
+
+# for MPICH
+conda install -c conda-forge genesis2=*=mpi_mpich*
+```
+
+For usage with External MPI (common with HPC systems), please refer to the conda-forge notes on this
+[link here](https://conda-forge.org/docs/user/tipsandtricks.html#using-external-message-passing-interface-mpi-libraries).
 
 # Compiling The Code
 
