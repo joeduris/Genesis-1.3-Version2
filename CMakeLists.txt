@@ -16,6 +16,11 @@ set(BUILD_SHARED_LIBS OFF)
 
 option(USE_MPI "Activate MPI build" OFF)
 
+# Disable Summary Warnings. For more details,
+# https://github.com/slaclab/Genesis-1.3-Version2/issues/13
+set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -ffpe-summary='none'")
+
+
 list(APPEND _sources
     main.f
     check.f
