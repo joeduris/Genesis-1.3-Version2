@@ -1377,7 +1377,7 @@ c
       do i=12,14+1*nhmax
          lout(i)=0 
       enddo
-      iotail=0                !<>0 => output include also slippage
+      iotail=1                !<>0 => output include also slippage. Using iotail != 1 produces incomplete output.
       idump=0                 !<>0 => dump complete radiation field.
       nharm=1                 !# or harmonics in the bunching factor
       iallharm=0              !<>0 => all higher harmonics are calculated up to nharm 
