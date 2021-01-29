@@ -622,10 +622,10 @@ c     ------------------------------------------------------------------
  5    format('***  writing history record for slice ',i5)
  10   format(/'********** output: slice ',i5/
      f          5x,'      ================='/
-     f       1x,1pe14.4,' current'//)
+     f       1x,1es23.15,' current'//)
  11   format(/'********** output: slice ',i5/
      f          5x,'      ================='/
-     f       1x,1pe14.4,' scan value'//)
+     f       1x,1es23.15,' scan value'//)
  20   format((50(a14))) 
  50   format(I1.1)
 c
