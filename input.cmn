@@ -28,9 +28,9 @@ c     output
       integer   iotail,nharm,iallharm,iharmsc,magin,magout,lout
       integer   idmpfld,idmppar,idump,ilog,ffspec	
 c     external files
-      character*30  beamfile,fieldfile,maginfile,magoutfile
-      character*30  outputfile,inputfile,partfile,distfile
-      character*30  filetype,radfile 	   
+      character*2000  beamfile,fieldfile,maginfile,magoutfile
+      character*2000  outputfile,inputfile,partfile,distfile,radfile 
+      character*30  filetype   
 c     time-dependency
       real*8    curlen,shotnoise
       integer   ntail,nslice,iall,itdp,ipseed,ndcut,isntyp
