@@ -8,7 +8,7 @@ c
       integer original,f_sdds,keepdist
 c
       parameter(
-     +          genver = 2.5,                !genesis version
+     +          genver = 2.6,                !genesis version
 #if WIN == 1
      +			platf  ='Win ',              !platform
 #else

@@ -10,7 +10,7 @@ c     ------------------------------------------------------------------
       include 'field.cmn'
 
       integer ierr1,ierr2,i,ih
-      character*34 file
+      character*2000 file
       character*11  file_id
       character*4   file_ext
 c
@@ -247,7 +247,7 @@ c
 c        read(5,110) inputfile                        !get input filename.
       endif
       if (mpi_size.gt.1) then
-        call MPI_BCAST(inputfile,30,MPI_CHARACTER,0,
+        call MPI_BCAST(inputfile,2000,MPI_CHARACTER,0,
      c                MPI_COMM_WORLD,mpi_err)
       endif
 c
