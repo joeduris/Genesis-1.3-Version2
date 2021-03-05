@@ -1088,7 +1088,7 @@ c
       endif
 c
       if (ndcut.le.0) ndcut=nget*nharm/npart    !self optimizing
-      if (ndcut.le.0) ndcut=1
+c      if (ndcut.le.0) ndcut=1
 c
       if (charge.le.0) then
          i=printerr(errinput,'CHARGE for DISTFILE is not defined')
